@@ -77,7 +77,7 @@ public class ProductoController {
     @PostMapping("/save")
     public String save(Producto producto, @RequestParam("img") MultipartFile file) {
         LOGGER.info("producto: {}" + producto);
-        Usuario usuario = new Usuario(10003, "Nahuel", "Nahu1979", "nec2@solutions.com.ar", "Sala 444 4B", "12345678", "ADMIN", "123456");
+        Usuario usuario = new Usuario(10003, "Mariano", "Mariano97", "mariano27897@gmail.com", "Sala 444 4B", "12345678", "ADMIN", "123456");
         producto.setUsuario(usuario);
         if(producto.getId()==null){
             String imagename = uploadFileService.saveImage(file);

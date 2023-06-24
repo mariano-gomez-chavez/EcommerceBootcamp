@@ -27,10 +27,10 @@ public class UploadFileService {
         try {
             String ruta = FOLDER + filename;
             File file = new File(ruta);
-            if(file.exists()) {
+            if(file.exists()) { //si el archivo existe se elimina
                 file.delete();
             }
-        } catch (Exception e) {
+        } catch (Exception e) { //si no existe se muestra un mensaje de error
             System.out.println("Error al eliminar la imagen: " + e.getMessage());
         }
     }
